@@ -38,15 +38,21 @@ namespace Projeto
             textoVisor = FindViewById<TextView>(Resource.Id.textoVisor);
 
 
-
-            segundo.Text = Intent.GetStringExtra("mensagem");
+            
+            textoVisor.Text = Intent.GetStringExtra("mensagem");
 
 
             button2.Click += delegate
             {
-                Intent i = new Intent(this, typeof(MainActivity));
-                i.PutExtra("mensagem", segundo.Text);
-                StartActivityForResult(i, 0);
+                Intent a = new Intent(this, typeof(MainActivity));
+                a.PutExtra("foto", ImageView..view1);
+                SetResult(Result.Ok, a);
+                Finish();
+
+
+                
+
+
 
 
 
